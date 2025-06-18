@@ -1,5 +1,5 @@
 {
-  "name": "code-craft",
+  "name": "lyt-code",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,15 +11,21 @@
   "dependencies": {
     "@clerk/nextjs": "^6.6.0",
     "@monaco-editor/react": "^4.6.0",
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-popover": "^1.1.14",
+    "@radix-ui/react-tooltip": "^1.2.7",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
     "convex": "^1.17.3",
     "framer-motion": "^11.13.1",
     "lucide-react": "^0.464.0",
     "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-hot-toast": "^2.4.1",
     "react-syntax-highlighter": "^15.6.1",
     "svix": "^1.42.0",
+    "tailwind-merge": "^3.3.1",
     "zustand": "^5.0.1"
   },
   "devDependencies": {

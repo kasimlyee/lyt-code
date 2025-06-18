@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/providers/ConvexClientProvider";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,8 +19,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Code Craft",
-  description: "Share and run code snippets",
+  title: "LytCode | Where ideas compile",
+  description:
+    "LytCode is a sleek, cloud-based code editor designed for developers who value speed, simplicity, and focus. Whether you're writing JavaScript, Python, HTML/CSS, or just sketching ideas, LytCode gives you a clean, distraction-free environment to code in real time—from any device, anywhere.",
 };
 
 export default function RootLayout({
@@ -33,7 +35,9 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-gray-100 flex flex-col`}
         >
-          <ConvexClientProvider>{children}</ConvexClientProvider>
+          <TooltipProvider>
+            <ConvexClientProvider>{children}</ConvexClientProvider>
+          </TooltipProvider>
 
           <Footer />
 
@@ -43,5 +47,3 @@ export default function RootLayout({
     </ClerkProvider>
   );
 }
-
-// https://emkc.org/api/v2/piston/runtimes
